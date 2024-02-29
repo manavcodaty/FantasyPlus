@@ -1,6 +1,13 @@
 import pandas as pd
 
 def create_f1_team():
+    df = pd.read_csv("f1.csv")
+    print(df)
+    team = input("Enter team name: ")
+    driver1 = input("Enter Driver 1: ")
+    driver2 = input("Enter Driver 2: ")
+    engine = input("Enter Engine Manufacturer: ")
+    
     
     
     
