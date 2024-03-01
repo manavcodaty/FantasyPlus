@@ -7,6 +7,18 @@ def create_f1_team():
     driver1 = input("Enter Driver 1: ")
     driver2 = input("Enter Driver 2: ")
     engine = input("Enter Engine Manufacturer: ")
+    chassis = input("Enter Chassis: ")
+    car = input("Enter Car: ")
+    
+    dict = {"Team": team, 
+            "Driver 1": driver1, 
+            "Driver ": driver2, 
+            "Engine Manufacturer": engine, 
+            "Chassis": chassis, 
+            "Car": car}
+    
+    temp = pd.DataFrame.from_dict(dict, orient='index')
+    temp.to_csv("f1_teams_choices.csv", mode='a', header=False)
     
     
     
