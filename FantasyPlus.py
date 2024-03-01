@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def create_f1_team():
     df = pd.read_csv("f1.csv")
     print(df)
@@ -9,24 +10,18 @@ def create_f1_team():
     engine = input("Enter Engine Manufacturer: ")
     chassis = input("Enter Chassis: ")
     car = input("Enter Car: ")
-    
-    dict = {"Team": team, 
-            "Driver 1": driver1, 
-            "Driver ": driver2, 
-            "Engine Manufacturer": engine, 
-            "Chassis": chassis, 
-            "Car": car
-            }
-    
-    temp = pd.DataFrame.from_dict(dict, orient='index')
-    temp.to_csv("f1_teams_choices.csv", mode='a', header=False)
-    
-    
-    
-    
 
+    dict = {
+        "Team": team,
+        "Driver 1": driver1,
+        "Driver ": driver2,
+        "Engine Manufacturer": engine,
+        "Chassis": chassis,
+        "Car": car,
+    }
 
-    
+    temp = pd.DataFrame.from_dict(dict, orient="index")
+    temp.to_csv("f1_teams_choices.csv", mode="a", header=False)
 
 
 def f1():
@@ -44,7 +39,6 @@ def f1():
     else:
         print("Invalid choice")
         f1()
-    
 
 
 def cricket():
@@ -53,7 +47,7 @@ def cricket():
     print("2. T20 World Cup")
     print("3. ODI World Cup")
     choice = int(input())
-    
+
     if choice == 1:
         ipl()
     elif choice == 2:
@@ -63,7 +57,8 @@ def cricket():
     else:
         print("Invalid choice")
         cricket()
-        
+
+
 def create_nba_team():
     df = pd.read_csv("nba.csv")
     print(df)
@@ -73,18 +68,20 @@ def create_nba_team():
     player3 = input("Enter Player 3: ")
     player4 = input("Enter Player 4: ")
     player5 = input("Enter Player 5: ")
-    
-    dict = {"Team": team, 
-            "Player 1": player1, 
-            "Player 2": player2, 
-            "Player 3": player3, 
-            "Player 4": player4, 
-            "Player 5": player5
-            }
-    
-    temp = pd.DataFrame.from_dict(dict, orient='index')
-    temp.to_csv("nba_teams_choices.csv", mode='a', header=False)
-        
+
+    dict = {
+        "Team": team,
+        "Player 1": player1,
+        "Player 2": player2,
+        "Player 3": player3,
+        "Player 4": player4,
+        "Player 5": player5,
+    }
+
+    temp = pd.DataFrame.from_dict(dict, orient="index")
+    temp.to_csv("nba_teams_choices.csv", mode="a", header=False)
+
+
 def nba():
     print("----------Welcome to NBA FantasyPlus!----------")
     print("1. Create Team")
@@ -100,16 +97,12 @@ def nba():
     else:
         print("Invalid choice")
         nba()
-        
-        
+
+
 def basketball():
     print("----------Welcome to Basketball FantasyPlus!----------")
     print("NBA loading.....")
     nba()
-
-
-
-
 
 
 def start():
@@ -118,7 +111,7 @@ def start():
     print("2. F1")
     print("3. Basketball")
     choice = int(input())
-    
+
     if choice == 1:
         cricket()
     elif choice == 2:
